@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#navlinks { 
+  margin-right: 2rem;
+}
+
+.blog-summary {
+  margin-top: 5rem;
+}
+
+#newblog  {
+  margin-top: 8rem;
+}
+
+.input-field {
+  margin-top: 5rem;
+}
