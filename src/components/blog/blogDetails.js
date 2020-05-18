@@ -1,4 +1,7 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {compose} from 'redux'
+import {firestoreConnect} from 'react-redux-firebase'
 
 const BlogDetails = (props) => {
   const id = props.match.params.id;
@@ -7,7 +10,7 @@ const BlogDetails = (props) => {
       <div className="card z-depth-0">
         <div className="card-content">
           <span className="card-title">Blog title - { id }</span>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore quaerat quibusdam vel saepe, ab voluptate accusantium culpa nemo fuga earum? Soluta amet nobis officia sed neque fuga aperiam quia?</p>
+          <p></p>
         </div>
         <div className="card-action grey lighten-4 grey-text">
           <div>Posted by The Net Ninja</div>
@@ -17,5 +20,17 @@ const BlogDetails = (props) => {
     </div>
   )
 }
+const mapStatetoProps=(state,ownProps)=>{
+  console.log(state);
+  //const id = ownProps.match.params.id;
+  return{
 
-export default BlogDetails
+  }
+}
+
+export default compose(
+  connect(mapStatetoProps),
+  firestoreConnect([
+    {collection : 'blogs'}
+  ])
+)(BlogDetails)

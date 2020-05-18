@@ -1,15 +1,23 @@
 const initState = {
     blogs : [
-        {id:1,title : "First",content : "loremdjfvjbnvjern"},
-        {id:2,title : "First",content : "loremdjfvjbnvjern"},
-        {id:3,title : "First",content : "loremdjfvjbnvjern"},
-        {id:4,title : "First",content : "loremdjfvjbnvjern"},
-        {id:5,title : "First",content : "loremdjfvjbnvjern"},
     ]
 }
 
-const blogReducer = (state=initState,action) => {
-    return state
-} 
+const blogReducer = (state = initState, action) => {
+    switch (action.type) {
+      case 'CREATE_BLOG':
+        console.log('create project', action.blog);
+        return state;
 
-export default blogReducer
+      case 'CREATE_BLOG_ERROR':
+        console.log('error in creating blog !', action.err);
+        return state;
+
+      default:
+          return state;
+
+    }
+  };
+  
+
+export default blogReducer;

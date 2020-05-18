@@ -10,12 +10,11 @@ const BlogSummary = ({blog}) => {
                 <p>{blog.content}</p>
               </div>
               <div className="card-action">
-                <a href="/blog/id">...more</a>
+                {/* <a href= "/blog/key">...more</a> */}
               </div>
             </div>
           </div>
         </div>
-
     );
 }
 
