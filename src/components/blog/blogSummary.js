@@ -1,22 +1,16 @@
 import React from 'react'
 
-const BlogSummary = () => {
-    return (
-
+const BlogSummary = ({blog}) => {
+  return (
         <div className = 'blog-summary'>
           <div className="col s12 m6">
-            <div className="card blue-grey darken-4">
+            <div className="card grey darken-2 card">
               <div className="card-content white-text">
-                <span className="card-title">Card Title</span>
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
+                <span className="card-title">{blog.title}</span>
+                <p>{blog.content}</p>
               </div>
               <div className="card-action">
-                <a href="/">This is a link</a>
-                <a href="/">This is a link</a>
+                <a href="/blog/id">...more</a>
               </div>
             </div>
           </div>

@@ -7,7 +7,6 @@ import BlogDetails from './components/blog/blogDetails'
 import Login from './components/auth/login'
 import Signup from './components/auth/signup'
 
-
 function App() {
   return (
     <BrowserRouter>
