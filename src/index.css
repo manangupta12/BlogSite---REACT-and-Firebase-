@@ -53,3 +53,7 @@ form{
 form button, form h5{
   margin: 20px 0;
 }
+
+.author { 
+  margin-left: 70rem;
+}

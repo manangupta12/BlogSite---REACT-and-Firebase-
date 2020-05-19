@@ -1,12 +1,9 @@
-const initState = {
-    blogs : [
-    ]
-}
+const initState = {}
 
 const blogReducer = (state = initState, action) => {
     switch (action.type) {
       case 'CREATE_BLOG':
-        console.log('create project', action.blog);
+        console.log('create blog success');
         return state;
 
       case 'CREATE_BLOG_ERROR':
@@ -15,7 +12,6 @@ const blogReducer = (state = initState, action) => {
 
       default:
           return state;
-
     }
   };
   
